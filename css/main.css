@@ -1,0 +1,169 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-lite: #ffffff;
+    --bg-dark: #000000;
+    --bg-medium: #555555;
+
+    --fonts-lite: #dddddd;
+    --fonts-medium: #eeeeee;
+    --fonts-dark: #333333;
+}
+
+.intro {
+    font-size: 5vw;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    font-size: 8vw;
+}
+
+nav {
+    display: block;
+}
+
+nav ul {
+    margin-top: 1em;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 0.5em 2em;
+    position: relative;
+}
+
+a::after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a:hover::after { 
+    width: 100%; 
+    left: 0; 
+}
+
+img {
+    width: 100%;
+    max-width: 600px;
+    height: 70vh;
+    display: inline-block;
+    box-shadow: 0 0 10px 2px;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-color: #000000;
+    text-decoration-thickness: 2px;
+}
+
+header {
+    background: url(/images/header.jpg) no-repeat center / cover, radial-gradient(#777, #444);
+    background-blend-mode: multiply;
+    padding: 1em 3em;
+    color: var(--fonts-lite);
+}
+
+header p {
+    text-transform: uppercase;
+}
+
+p:not(header p) {
+    margin-bottom: 1em;
+    padding: 0 0.5em;
+}
+
+p {
+    max-width: 600px;
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+footer {
+    background: url(/images/jon-ade-holter-2S_qGPgpwyE-unsplash.jpg) no-repeat center / cover, radial-gradient(#777, #444);
+    background-blend-mode: multiply;
+    padding: 2em 0;
+    color: var(--fonts-lite);
+}
+
+.author {
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        max-width: 900px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li a {
+        font-size: 1.3em;
+    }
+
+    img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    header {
+        max-width: 900px;
+        margin: 1em auto;
+    }
+
+    footer {
+        max-width: 950px;
+        margin: 1em auto;
+    }
+
+    p:not(header p, footer p) {
+        font-size: 1.5em;
+        color: var(--fonts-dark);
+        font-weight: 700;
+    }
+
+    footer P {
+        font-size: 2em;
+    }
+}
